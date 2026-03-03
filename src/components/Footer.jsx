@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
 
         <div className='site-footer__column'>
-          <h4>Category</h4>
+          <h4>Contact</h4>
           <ul>
             <li>70 Washington Square South, New York, NY 10012, United States</li>
             <li>+12345 678 910</li>
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='site-footer__bottom'>Copyright © 2026 OnlineITuts</div>
+      <div className='site-footer__bottom'>Copyright ï¿½ 2026 OnlineITuts</div>
     </footer>
   )
 }
