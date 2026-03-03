@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import About from './pages/About'
+import Account from './pages/Account'
 import CartPage from './pages/CartPage'
 import Contact from './pages/Contact'
 import FAQs from './pages/FAQs'
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/faqs' element={<FAQs />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/account' element={<Account />} />
         <Route path='/product' element={<ProductDetails />} />
         <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/cart' element={<CartPage />} />

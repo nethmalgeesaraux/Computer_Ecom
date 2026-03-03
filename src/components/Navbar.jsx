@@ -26,7 +26,7 @@ const Navbar = () => {
         ))}
       </nav>
 
-      <button type='button' className='top-nav__profile' aria-label='Profile'>
+      <NavLink to='/account' className='top-nav__profile' aria-label='Profile'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
@@ -42,7 +42,7 @@ const Navbar = () => {
           <path d='M20 21a8 8 0 1 0-16 0' />
           <circle cx='12' cy='7' r='4' />
         </svg>
-      </button>
+      </NavLink>
     </header>
   )
 }
