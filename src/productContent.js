@@ -1,11 +1,11 @@
-﻿export const products = [
+export const products = [
   {
     id: 1,
     title: "Asus ProArt GeForce RTX 4070",
     price: 999.99,
     category: "Graphic Cards",
     description: "Creator-grade RTX card with strong cooling and stable high-load performance.",
-    image: "https://source.unsplash.com/1200x800/?asus,gpu",
+    image: "https://loremflickr.com/1200/800/asus,gpu?lock=1",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@
     price: 299.99,
     category: "Graphic Cards",
     description: "Efficient dual-fan GPU for smooth 1080p and 1440p gaming.",
-    image: "https://source.unsplash.com/1200x800/?msi,graphics-card",
+    image: "https://loremflickr.com/1200/800/msi,gpu?lock=2",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@
     price: 629.99,
     category: "Graphic Cards",
     description: "Balanced performance and thermals for modern games and creative software.",
-    image: "https://source.unsplash.com/1200x800/?gigabyte,gpu",
+    image: "https://loremflickr.com/1200/800/gigabyte,gpu?lock=3",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@
     price: 279.99,
     category: "Graphic Cards",
     description: "Compact RTX card with DLSS support and low-noise cooling.",
-    image: "https://source.unsplash.com/1200x800/?nvidia,gpu",
+    image: "https://loremflickr.com/1200/800/nvidia,gpu?lock=4",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@
     price: 389.99,
     category: "Graphic Cards",
     description: "Solid AMD option for high FPS gaming at 1080p and 1440p.",
-    image: "https://source.unsplash.com/1200x800/?amd,graphics-card",
+    image: "https://loremflickr.com/1200/800/amd,gpu?lock=5",
   },
   {
     id: 6,
@@ -45,7 +45,7 @@
     price: 269.99,
     category: "Graphic Cards",
     description: "Budget-friendly modern GPU with reliable cooling design.",
-    image: "https://source.unsplash.com/1200x800/?pc,gpu",
+    image: "https://loremflickr.com/1200/800/gpu,pc?lock=6",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@
     price: 349.99,
     category: "Monitors",
     description: "Fast IPS gaming monitor with crisp colors and high refresh rate.",
-    image: "https://source.unsplash.com/1200x800/?gaming,monitor",
+    image: "https://loremflickr.com/1200/800/gaming,monitor?lock=7",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@
     price: 169.99,
     category: "Monitors",
     description: "Clean design office monitor with accurate colors and eye comfort.",
-    image: "https://source.unsplash.com/1200x800/?dell,monitor",
+    image: "https://loremflickr.com/1200/800/dell,monitor?lock=8",
   },
   {
     id: 9,
@@ -69,7 +69,7 @@
     price: 329.99,
     category: "Monitors",
     description: "Curved QHD display for immersive gaming and multitasking.",
-    image: "https://source.unsplash.com/1200x800/?samsung,monitor",
+    image: "https://loremflickr.com/1200/800/samsung,monitor?lock=9",
   },
   {
     id: 10,
@@ -77,7 +77,7 @@
     price: 189.99,
     category: "Monitors",
     description: "Popular 144Hz monitor with smooth visuals and thin bezels.",
-    image: "https://source.unsplash.com/1200x800/?aoc,monitor",
+    image: "https://loremflickr.com/1200/800/aoc,monitor?lock=10",
   },
   {
     id: 11,
@@ -85,7 +85,7 @@
     price: 219.99,
     category: "Monitors",
     description: "Minimal monitor with ergonomic stand and vivid IPS panel.",
-    image: "https://source.unsplash.com/1200x800/?office,monitor",
+    image: "https://loremflickr.com/1200/800/office,monitor?lock=11",
   },
   {
     id: 12,
@@ -93,7 +93,7 @@
     price: 199.99,
     category: "Monitors",
     description: "Responsive gaming monitor built for low latency play.",
-    image: "https://source.unsplash.com/1200x800/?asus,monitor",
+    image: "https://loremflickr.com/1200/800/asus,monitor?lock=12",
   },
   {
     id: 13,
@@ -101,7 +101,7 @@
     price: 29.99,
     category: "Mouse",
     description: "Accurate entry-level gaming mouse with RGB lighting.",
-    image: "https://source.unsplash.com/1200x800/?logitech,mouse",
+    image: "https://loremflickr.com/1200/800/logitech,mouse?lock=13",
   },
   {
     id: 14,
@@ -109,7 +109,7 @@
     price: 39.99,
     category: "Mouse",
     description: "Ergonomic shape and reliable sensor for long sessions.",
-    image: "https://source.unsplash.com/1200x800/?razer,mouse",
+    image: "https://loremflickr.com/1200/800/razer,mouse?lock=14",
   },
   {
     id: 15,
@@ -117,7 +117,7 @@
     price: 34.99,
     category: "Mouse",
     description: "Lightweight performance mouse with durable switches.",
-    image: "https://source.unsplash.com/1200x800/?gaming-mouse",
+    image: "https://loremflickr.com/1200/800/gaming,mouse?lock=15",
   },
   {
     id: 16,
@@ -125,7 +125,7 @@
     price: 44.99,
     category: "Mouse",
     description: "Fast tracking gaming mouse with textured side grips.",
-    image: "https://source.unsplash.com/1200x800/?corsair,mouse",
+    image: "https://loremflickr.com/1200/800/corsair,mouse?lock=16",
   },
   {
     id: 17,
@@ -133,7 +133,7 @@
     price: 59.99,
     category: "Mouse",
     description: "Ultra-light honeycomb design for quick flicks and control.",
-    image: "https://source.unsplash.com/1200x800/?pc-mouse",
+    image: "https://loremflickr.com/1200/800/pc,mouse?lock=17",
   },
   {
     id: 18,
@@ -141,7 +141,7 @@
     price: 49.99,
     category: "Mouse",
     description: "Featherweight competitive mouse with flexible cable.",
-    image: "https://source.unsplash.com/1200x800/?hyperx,mouse",
+    image: "https://loremflickr.com/1200/800/hyperx,mouse?lock=18",
   },
   {
     id: 19,
@@ -149,7 +149,7 @@
     price: 54.99,
     category: "Keyboard",
     description: "Compact mechanical keyboard with tactile switch feel.",
-    image: "https://source.unsplash.com/1200x800/?mechanical-keyboard",
+    image: "https://loremflickr.com/1200/800/mechanical,keyboard?lock=19",
   },
   {
     id: 20,
@@ -157,7 +157,7 @@
     price: 149.99,
     category: "Keyboard",
     description: "Premium full-size keyboard built for fast response.",
-    image: "https://source.unsplash.com/1200x800/?corsair,keyboard",
+    image: "https://loremflickr.com/1200/800/corsair,keyboard?lock=20",
   },
   {
     id: 21,
@@ -165,7 +165,7 @@
     price: 129.99,
     category: "Keyboard",
     description: "Clicky mechanical keyboard with bright RGB effects.",
-    image: "https://source.unsplash.com/1200x800/?razer,keyboard",
+    image: "https://loremflickr.com/1200/800/razer,keyboard?lock=21",
   },
   {
     id: 22,
@@ -173,7 +173,7 @@
     price: 89.99,
     category: "Keyboard",
     description: "Durable aluminum-frame keyboard with dependable switches.",
-    image: "https://source.unsplash.com/1200x800/?logitech,keyboard",
+    image: "https://loremflickr.com/1200/800/logitech,keyboard?lock=22",
   },
   {
     id: 23,
@@ -181,7 +181,7 @@
     price: 99.99,
     category: "Keyboard",
     description: "Popular wireless mechanical keyboard for work and gaming.",
-    image: "https://source.unsplash.com/1200x800/?wireless,keyboard",
+    image: "https://loremflickr.com/1200/800/wireless,keyboard?lock=23",
   },
   {
     id: 24,
@@ -189,7 +189,7 @@
     price: 79.99,
     category: "Keyboard",
     description: "Compact 65% keyboard with hot-swappable switch support.",
-    image: "https://source.unsplash.com/1200x800/?rgb,keyboard",
+    image: "https://loremflickr.com/1200/800/rgb,keyboard?lock=24",
   },
   {
     id: 25,
@@ -197,7 +197,7 @@
     price: 89.99,
     category: "Headset",
     description: "Comfortable headset with clean mic voice pickup.",
-    image: "https://source.unsplash.com/1200x800/?gaming,headset",
+    image: "https://loremflickr.com/1200/800/gaming,headset?lock=25",
   },
   {
     id: 26,
@@ -205,7 +205,7 @@
     price: 99.99,
     category: "Headset",
     description: "Detailed spatial audio with breathable ear cushions.",
-    image: "https://source.unsplash.com/1200x800/?steelseries,headset",
+    image: "https://loremflickr.com/1200/800/steelseries,headset?lock=26",
   },
   {
     id: 27,
@@ -213,7 +213,7 @@
     price: 59.99,
     category: "Headset",
     description: "Lightweight wired headset with virtual surround sound.",
-    image: "https://source.unsplash.com/1200x800/?razer,headset",
+    image: "https://loremflickr.com/1200/800/razer,headset?lock=27",
   },
   {
     id: 28,
@@ -221,7 +221,7 @@
     price: 69.99,
     category: "Headset",
     description: "Wireless headset with low-latency connectivity.",
-    image: "https://source.unsplash.com/1200x800/?logitech,headphones",
+    image: "https://loremflickr.com/1200/800/logitech,headphones?lock=28",
   },
   {
     id: 29,
@@ -229,7 +229,7 @@
     price: 64.99,
     category: "Headset",
     description: "Soft memory foam cushions and clear flip-to-mute mic.",
-    image: "https://source.unsplash.com/1200x800/?corsair,headset",
+    image: "https://loremflickr.com/1200/800/corsair,headset?lock=29",
   },
   {
     id: 30,
@@ -237,8 +237,10 @@
     price: 49.99,
     category: "Headset",
     description: "Budget gaming headset with punchy sound profile.",
-    image: "https://source.unsplash.com/1200x800/?jbl,headset",
+    image: "https://loremflickr.com/1200/800/jbl,headset?lock=30",
   },
 ];
 
 export default products;
+
+

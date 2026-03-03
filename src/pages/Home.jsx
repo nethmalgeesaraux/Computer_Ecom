@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import ProductGrid from '../components/ProductGrid'
+import products from '../productContent'
 
 const Home = () => {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('All')
+
+  const categories = useMemo(
+    () => [...new Set(products.map((product) => product.category))],
+    [],
+  )
+
+  const filteredProducts = useMemo(() => {
+    return products.filter((product) => {
+      const matchesCategory =
+        selectedCategory === 'All' || product.category === selectedCategory
+      const matchesSearch = product.title
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase())
+
+      return matchesCategory && matchesSearch
+    })
+  }, [searchQuery, selectedCategory])
+
   return (
     <main className='home-page'>
       <header className='home-header'>
-        <div className='home-header__logo'>audiophile</div>
+        <div className='home-header__logo'>CyberNest</div>
 
         <div className='home-header__search-wrap'>
           <input
@@ -13,6 +34,8 @@ const Home = () => {
             className='home-header__search'
             placeholder='Search Product'
             aria-label='Search Product'
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
           />
         </div>
 
@@ -58,7 +81,12 @@ const Home = () => {
         <div className='home-hero__plant' />
       </section>
 
-      <ProductGrid />
+      <ProductGrid
+        categories={categories}
+        selectedCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+        products={filteredProducts}
+      />
     </main>
   )
 }
