@@ -1,10 +1,28 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Footer from '../components/Footer'
 import ProductGrid from '../components/ProductGrid'
 import products from '../productContent'
+import { getCartCount, onCartUpdated } from '../utils/cartStorage'
 
 const Home = () => {
+  const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
+  const [cartCount, setCartCount] = useState(0)
+
+  useEffect(() => {
+    const refreshCartCount = () => setCartCount(getCartCount())
+    refreshCartCount()
+
+    const removeListener = onCartUpdated(refreshCartCount)
+    window.addEventListener('focus', refreshCartCount)
+
+    return () => {
+      removeListener()
+      window.removeEventListener('focus', refreshCartCount)
+    }
+  }, [])
 
   const categories = useMemo(
     () => [...new Set(products.map((product) => product.category))],
@@ -39,7 +57,12 @@ const Home = () => {
           />
         </div>
 
-        <button type='button' className='home-header__cart' aria-label='Cart'>
+        <button
+          type='button'
+          className='home-header__cart'
+          aria-label='Cart'
+          onClick={() => navigate('/cart')}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'
@@ -56,6 +79,7 @@ const Home = () => {
             <circle cx='19' cy='21' r='1' />
             <path d='M2.5 3h2l2.7 12.6a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6' />
           </svg>
+          {cartCount > 0 && <span className='home-header__cart-badge'>{cartCount}</span>}
         </button>
       </header>
 
@@ -87,6 +111,8 @@ const Home = () => {
         onCategoryChange={setSelectedCategory}
         products={filteredProducts}
       />
+
+      <Footer />
     </main>
   )
 }

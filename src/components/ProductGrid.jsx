@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductGrid = ({
   categories,
@@ -36,19 +37,21 @@ const ProductGrid = ({
       <div className='product-grid__list'>
         {products.map((product) => (
           <article key={product.id} className='product-grid__card'>
-            <div className='product-grid__image-wrap'>
-              <img
-                src={product.image}
-                alt={product.title}
-                className='product-grid__image'
-                loading='lazy'
-              />
-            </div>
-            <div className='product-grid__content'>
-              <h3>{product.title}</h3>
-              <p className='product-grid__meta'>{product.category}</p>
-              <p className='product-grid__price'>${product.price.toFixed(2)}</p>
-            </div>
+            <Link to={`/product/${product.id}`} className='product-grid__card-link'>
+              <div className='product-grid__image-wrap'>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className='product-grid__image'
+                  loading='lazy'
+                />
+              </div>
+              <div className='product-grid__content'>
+                <h3>{product.title}</h3>
+                <p className='product-grid__meta'>{product.category}</p>
+                <p className='product-grid__price'>${product.price.toFixed(2)}</p>
+              </div>
+            </Link>
           </article>
         ))}
       </div>
