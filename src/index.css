@@ -1,3 +1,71 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 78px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.top-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.top-nav__link {
+  color: #181818;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.top-nav__link--active {
+  font-weight: 650;
+}
+
+.top-nav__profile {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cdcdcd;
+  background: #ececec;
+  color: #181818;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  .top-nav__links {
+    gap: 14px;
+  }
+
+  .top-nav__link {
+    font-size: 1rem;
+  }
+
+  .top-nav__profile {
+    width: 36px;
+    height: 36px;
+  }
+}
