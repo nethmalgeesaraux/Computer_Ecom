@@ -574,6 +574,49 @@ html {
   font-size: 0.9rem;
 }
 
+.account-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(10, 20, 36, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  animation: page-enter 0.25s ease both;
+}
+
+.account-modal__card {
+  width: min(680px, 100%);
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  background: #f7f9fe;
+  border: 1px solid #d2dbeb;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 20px 48px rgba(12, 22, 38, 0.28);
+}
+
+.account-modal__card h2 {
+  margin: 6px 0 12px;
+  color: #1c2740;
+}
+
+.account-modal__close {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: #dfe6f3;
+  color: #1f2a42;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .site-footer {
   background: #10203b;
   color: #f2f6ff;

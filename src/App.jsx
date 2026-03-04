@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Account from './pages/Account'
 import CartPage from './pages/CartPage'
 import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
@@ -47,17 +46,58 @@ const ScrollRevealManager = () => {
 }
 
 const App = () => {
+  const [isAccountOpen, setIsAccountOpen] = useState(false)
+
   return (
     <BrowserRouter>
       <ScrollRevealManager />
-      <Navbar />
+      <Navbar onOpenAccount={() => setIsAccountOpen(true)} />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/account' element={<Account />} />
+        <Route path='/' element={<Home onOpenAccount={() => setIsAccountOpen(true)} />} />
         <Route path='/product' element={<ProductDetails />} />
         <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/cart' element={<CartPage />} />
       </Routes>
+
+      {isAccountOpen && (
+        <div className='account-modal' onClick={() => setIsAccountOpen(false)}>
+          <section
+            className='account-modal__card'
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type='button'
+              className='account-modal__close'
+              aria-label='Close account modal'
+              onClick={() => setIsAccountOpen(false)}
+            >
+              ×
+            </button>
+
+            <p className='info-page__eyebrow'>My Account</p>
+            <h2>Manage your profile</h2>
+            <form className='account-form'>
+              <label>
+                Full Name
+                <input type='text' placeholder='Enter full name' />
+              </label>
+              <label>
+                Email
+                <input type='email' placeholder='Enter email address' />
+              </label>
+              <label>
+                Phone Number
+                <input type='tel' placeholder='Enter phone number' />
+              </label>
+              <label>
+                Address
+                <textarea rows='4' placeholder='Enter address' />
+              </label>
+              <button type='submit'>Save Changes</button>
+            </form>
+          </section>
+        </div>
+      )}
     </BrowserRouter>
   )
 }

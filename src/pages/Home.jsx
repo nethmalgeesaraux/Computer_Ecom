@@ -22,7 +22,7 @@ const faqItems = [
   },
 ]
 
-const Home = () => {
+const Home = ({ onOpenAccount }) => {
   const navigate = useNavigate()
   const location = useLocation()
   const [searchQuery, setSearchQuery] = useState('')
@@ -135,7 +135,7 @@ const Home = () => {
         <div className='home-hero__lamp' />
         <div className='home-hero__plant' />
       </section>
-        <br/>
+      <br/>
 
       <section id='about-section' className='home-inline-section' data-reveal>
         <p className='info-page__eyebrow'>About CyberNest</p>
@@ -145,7 +145,6 @@ const Home = () => {
           Every product in our catalog is selected for value, durability, and daily performance.
         </p>
       </section>
-      <br/>
 
       <ProductGrid
         categories={categories}
@@ -182,7 +181,7 @@ const Home = () => {
         <h2>Need help with a product or order?</h2>
         <p>Send us a message and our support team will get back to you quickly.</p>
         <div className='home-inline-contact__actions'>
-          <button type='button' onClick={() => navigate('/account')}>
+          <button type='button' onClick={onOpenAccount}>
             Open Account
           </button>
           <span>support@cybernest.com | +1 2345 678 910</span>
