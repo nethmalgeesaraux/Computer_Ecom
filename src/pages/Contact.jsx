@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 const Contact = () => {
   return (
     <main className='info-page'>
-      <section className='info-page__hero contact-hero'>
+      <section className='info-page__hero contact-hero' data-reveal>
         <p className='info-page__eyebrow'>Contact</p>
         <h1>Let&apos;s build your perfect setup together</h1>
         <p>
@@ -14,8 +14,8 @@ const Contact = () => {
         </p>
       </section>
 
-      <section className='contact-layout'>
-        <form className='contact-form'>
+      <section className='contact-layout' data-reveal data-reveal-delay='60'>
+        <form className='contact-form' data-reveal data-reveal-delay='20'>
           <label>
             Full Name
             <input type='text' placeholder='Enter your name' />
@@ -34,7 +34,7 @@ const Contact = () => {
           </button>
         </form>
 
-        <aside className='contact-card'>
+        <aside className='contact-card' data-reveal data-reveal-delay='90'>
           <h2>Contact Info</h2>
           <ul className='contact-card__list'>
             <li>

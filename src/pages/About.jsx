@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 const About = () => {
   return (
     <main className='info-page'>
-      <section className='info-page__hero'>
+      <section className='info-page__hero' data-reveal>
         <p className='info-page__eyebrow'>About CyberNest</p>
         <h1>Built for people who love reliable computer gear</h1>
         <p>
@@ -14,8 +14,8 @@ const About = () => {
         </p>
       </section>
 
-      <section className='info-page__grid'>
-        <article className='info-card'>
+      <section className='info-page__grid' data-reveal data-reveal-delay='70'>
+        <article className='info-card' data-reveal data-reveal-delay='20'>
           <h2>Our Mission</h2>
           <p>
             Make PC shopping simple by offering trusted products, clear specs,
@@ -23,7 +23,7 @@ const About = () => {
           </p>
         </article>
 
-        <article className='info-card'>
+        <article className='info-card' data-reveal data-reveal-delay='80'>
           <h2>What We Sell</h2>
           <p>
             Graphic cards, laptops, monitors, and power supplies from leading
@@ -31,7 +31,7 @@ const About = () => {
           </p>
         </article>
 
-        <article className='info-card'>
+        <article className='info-card' data-reveal data-reveal-delay='140'>
           <h2>Why Choose Us</h2>
           <p>
             Fast response, easy ordering flow, and product guidance focused on

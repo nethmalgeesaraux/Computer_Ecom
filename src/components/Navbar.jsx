@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 
 const navItems = [
   { label: 'Home', to: '/', end: true },
-  { label: 'About', to: '/about' },
-  { label: 'FAQs', to: '/faqs' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'About', to: '/#about-section' },
+  { label: 'FAQs', to: '/#faqs-section' },
+  { label: 'Contact', to: '/#contact-section' },
 ]
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
             to={item.to}
             end={item.end}
             className={({ isActive }) =>
-              `top-nav__link ${isActive ? 'top-nav__link--active' : ''}`
+              `top-nav__link ${item.label === 'Home' && isActive ? 'top-nav__link--active' : ''}`
             }
           >
             {item.label}

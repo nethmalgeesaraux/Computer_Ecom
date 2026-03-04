@@ -27,17 +27,20 @@ const faqItems = [
 const FAQs = () => {
   return (
     <main className='info-page'>
-      <section className='info-page__hero'>
+      <section className='info-page__hero' data-reveal>
         <p className='info-page__eyebrow'>FAQs</p>
         <h1>Frequently asked questions</h1>
-        <p>
-          Quick answers about ordering, delivery, warranty, and support.
-        </p>
+        <p>Quick answers about ordering, delivery, warranty, and support.</p>
       </section>
 
-      <section className='faq-list'>
-        {faqItems.map((item) => (
-          <details key={item.question} className='faq-item'>
+      <section className='faq-list' data-reveal data-reveal-delay='60'>
+        {faqItems.map((item, index) => (
+          <details
+            key={item.question}
+            className='faq-item'
+            data-reveal
+            data-reveal-delay={index * 55}
+          >
             <summary>{item.question}</summary>
             <p>{item.answer}</p>
           </details>

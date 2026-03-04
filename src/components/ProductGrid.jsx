@@ -8,8 +8,8 @@ const ProductGrid = ({
   products,
 }) => {
   return (
-    <section className='product-grid' aria-label='Product Categories'>
-      <div className='product-grid__chips'>
+    <section className='product-grid' aria-label='Product Categories' data-reveal>
+      <div className='product-grid__chips' data-reveal data-reveal-delay='60'>
         <button
           type='button'
           className={`product-grid__chip ${
@@ -36,7 +36,12 @@ const ProductGrid = ({
 
       <div className='product-grid__list'>
         {products.map((product) => (
-          <article key={product.id} className='product-grid__card'>
+          <article
+            key={product.id}
+            className='product-grid__card'
+            data-reveal
+            data-reveal-delay={(product.id % 6) * 45}
+          >
             <Link to={`/product/${product.id}`} className='product-grid__card-link'>
               <div className='product-grid__image-wrap'>
                 <img

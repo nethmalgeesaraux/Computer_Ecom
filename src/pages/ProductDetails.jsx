@@ -35,7 +35,7 @@ const ProductDetails = () => {
 
   if (!product) {
     return (
-      <section className='product-details product-details--empty'>
+      <section className='product-details product-details--empty' data-reveal>
         <h2>Product not found</h2>
         <button type='button' onClick={() => navigate('/')}>
           Back to Home
@@ -45,12 +45,12 @@ const ProductDetails = () => {
   }
 
   return (
-    <section className='product-details'>
-      <div className='product-details__image-wrap'>
+    <section className='product-details' data-reveal>
+      <div className='product-details__image-wrap' data-reveal data-reveal-delay='20'>
         <img src={product.image} alt={product.title} className='product-details__image' />
       </div>
 
-      <div className='product-details__info'>
+      <div className='product-details__info' data-reveal data-reveal-delay='80'>
         <p className='product-details__category'>{product.category}</p>
         <h1>{product.title}</h1>
         <p className='product-details__description'>{product.description}</p>

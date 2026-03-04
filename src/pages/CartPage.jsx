@@ -32,16 +32,21 @@ const CartPage = () => {
   )
 
   return (
-    <section className='cart-page'>
-      <h1>Cart</h1>
+    <section className='cart-page' data-reveal>
+      <h1 data-reveal>Cart</h1>
 
       {cartItems.length === 0 && <p className='cart-page__empty'>Your cart is empty.</p>}
 
       {cartItems.length > 0 && (
         <>
-          <div className='cart-page__list'>
-            {cartItems.map((item) => (
-              <article key={item.id} className='cart-page__item'>
+          <div className='cart-page__list' data-reveal data-reveal-delay='40'>
+            {cartItems.map((item, index) => (
+              <article
+                key={item.id}
+                className='cart-page__item'
+                data-reveal
+                data-reveal-delay={index * 35}
+              >
                 <img src={item.image} alt={item.title} className='cart-page__image' />
                 <div className='cart-page__info'>
                   <h3>{item.title}</h3>
@@ -68,7 +73,9 @@ const CartPage = () => {
             ))}
           </div>
 
-          <div className='cart-page__total'>Total: ${total.toFixed(2)}</div>
+          <div className='cart-page__total' data-reveal data-reveal-delay='90'>
+            Total: ${total.toFixed(2)}
+          </div>
         </>
       )}
     </section>

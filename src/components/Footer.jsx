@@ -10,8 +10,8 @@ import {
 
 const Footer = () => {
   return (
-    <footer className='site-footer'>
-      <div className='site-footer__newsletter'>
+    <footer className='site-footer' data-reveal>
+      <div className='site-footer__newsletter' data-reveal>
         <h2>Subscribe Our Newsletter</h2>
         <form className='site-footer__subscribe-form'>
           <Mail size={18} aria-hidden='true' />
@@ -23,9 +23,9 @@ const Footer = () => {
         </form>
       </div>
 
-      <div className='site-footer__main'>
+      <div className='site-footer__main' data-reveal data-reveal-delay='80'>
         <div className='site-footer__column'>
-          <h3>audiophile</h3>
+          <h3>CyberNest</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ex
             laboriosam dignissimos iusto ut nam! Nemo quo maxime eaque error!
@@ -76,7 +76,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='site-footer__bottom'>Copyright � 2026 OnlineITuts</div>
+      <div className='site-footer__bottom' data-reveal data-reveal-delay='140'>
+        Copyright � 2026 OnlineITuts
+      </div>
     </footer>
   )
 }
